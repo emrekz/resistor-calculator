@@ -8,7 +8,6 @@ const char *imageText_l_2[] = {"./images/l_brown.png", "./images/l_red.png", "./
                            "./images/l_green.png", "./images/l_blue.png", "./images/l_purple.png", "./images/l_grey.png",  \
                            "./images/l_gold.png", "./images/l_silver.png", NULL};
 
-
 void set_band_color(GtkWidget *band_no_color, guint color, guint file) {
   switch (file) {
     case 0:

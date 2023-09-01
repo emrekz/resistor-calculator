@@ -58,6 +58,7 @@ static void band_count_disable_dropdown(GtkDropDown *dropdown_band) {
       band_456_string_list = gtk_string_list_new(band4_4);
       gtk_drop_down_set_model(GTK_DROP_DOWN(dropDown_4), G_LIST_MODEL(band_456_string_list));
       set_visible_band(band_count);
+      gtk_fixed_move(GTK_FIXED(fix), band_4_color, 395, 124);
       break;
     case 2:
       g_print("Five");
@@ -70,6 +71,7 @@ static void band_count_disable_dropdown(GtkDropDown *dropdown_band) {
       band_456_string_list = gtk_string_list_new(band4_5);
       gtk_drop_down_set_model(GTK_DROP_DOWN(dropDown_4), G_LIST_MODEL(band_456_string_list));
       set_visible_band(band_count);
+      gtk_fixed_move(GTK_FIXED(fix), band_4_color, 355, 124);
       break;
     case 3:
       g_print("Six");
@@ -82,6 +84,7 @@ static void band_count_disable_dropdown(GtkDropDown *dropdown_band) {
       band_456_string_list = gtk_string_list_new(band4_6);
       gtk_drop_down_set_model(GTK_DROP_DOWN(dropDown_4), G_LIST_MODEL(band_456_string_list));
       set_visible_band(band_count);
+      gtk_fixed_move(GTK_FIXED(fix), band_4_color, 355, 124);
       break;
   }
 }
@@ -105,7 +108,6 @@ static void activate(GtkApplication *app, gpointer user_data) {
   gtk_widget_set_margin_start(grid, 10);
   gtk_widget_set_margin_top(grid, 10);
   gtk_fixed_put(GTK_FIXED(fix), grid, 0, 0);
-
 
   lab = gtk_label_new("Band Count : ");
   gtk_grid_attach(GTK_GRID(grid), lab, 0, 0, 1, 1);
@@ -180,10 +182,9 @@ static void activate(GtkApplication *app, gpointer user_data) {
   gtk_image_set_pixel_size(GTK_IMAGE(band_6_color), 60);
   gtk_fixed_put(GTK_FIXED(fix), band_6_color, 425, 119);
 
-
   GtkCssProvider * provider;
   provider = gtk_css_provider_new();
-  gtk_css_provider_load_from_file(provider, g_file_new_for_path("style.css"));
+  gtk_css_provider_load_from_file(provider, g_file_new_for_path("./src/style.css"));
   gtk_style_context_add_provider_for_display(gtk_widget_get_display(window), GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
   gtk_widget_add_css_class(res_lab, "label");
 

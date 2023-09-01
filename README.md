@@ -17,7 +17,7 @@ make
 ```
 or
 ```
-gcc `pkg-config --cflags gtk4` -o run main.c calculate.c image.c `pkg-config --libs gtk4` -mwindows
+gcc `pkg-config --cflags gtk4` -o run ./src/main.c ./src/calculate.c ./src/image.c `pkg-config --libs gtk4` -mwindows
 
 ```
 ## Sample
